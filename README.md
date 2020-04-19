@@ -1,3 +1,7 @@
+This project is folked from natewong1313/bird-bot.
+The goal is to add Canada support for Best Buy
+
+
 # Bird Bot
 [Support Discord](https://discord.gg/8UVSkpP)<br/><br/>
 Bird Bot is an auto-checkout bot that currently supports Walmart and Best buy. It is intended to be used to purchase Nintendo Switch consoles. More sites will be added in the future.
