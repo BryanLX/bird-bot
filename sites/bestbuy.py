@@ -168,7 +168,7 @@ class BestBuy:
         }
         profile = self.profile
         body = {"items":[{"id":self.item_id,"type":"DEFAULT","selectedFulfillment":{"shipping":{"address":{
-            "country":"US",
+            "country":"Canada",
             "saveToProfile":False,
             "street2":profile["shipping_a2"],
             "useAddressAsBilling":False,
