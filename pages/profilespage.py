@@ -90,6 +90,7 @@ class ProfilesPage(QtWidgets.QWidget):
         self.shipping_country_box.setStyleSheet("outline: 0;border: 1px solid #5D43FB;border-width: 0 0 2px;color: rgb(234, 239, 239);")
         self.shipping_country_box.addItem("Country")
         self.shipping_country_box.addItem("United States")
+        self.shipping_country_box.addItem("Canada")
         self.profiles_header = QtWidgets.QLabel(self.profilespage)
         self.profiles_header.setGeometry(QtCore.QRect(30, 10, 81, 31))
         font.setPointSize(22) if platform.system() == "Darwin" else font.setPointSize(22*.75)
@@ -174,6 +175,7 @@ class ProfilesPage(QtWidgets.QWidget):
         self.billing_country_box.setStyleSheet("outline: 0;border: 1px solid #5D43FB;border-width: 0 0 2px;color: rgb(234, 239, 239);")
         self.billing_country_box.addItem("Country")
         self.billing_country_box.addItem("United States")
+        self.billing_country_box.addItem("Canada")
         self.same_shipping_checkbox = QtWidgets.QCheckBox(self.billing_card)
         self.same_shipping_checkbox.setGeometry(QtCore.QRect(160, 16, 131, 20))
         self.same_shipping_checkbox.setFont(font)
@@ -264,6 +266,14 @@ class ProfilesPage(QtWidgets.QWidget):
         for state in ["AL", "AK", "AS", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FM", "FL", "GA", "GU", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MH", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "MP", "OH", "OK", "OR", "PW", "PA", "PR", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VI", "VA", "WA", "WV", "WI", "WY"]:
             self.shipping_state_box.addItem(state)
             self.billing_state_box.addItem(state)
+        self.shipping_state_box.addItem("-----------")
+        self.shipping_state_box.addItem("Canada Provinces")
+        self.billing_state_box.addItem("-----------")
+        self.billing_state_box.addItem("Canada Provinces")
+        for province in ['AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT']:
+            self.shipping_state_box.addItem(province)
+            self.billing_state_box.addItem(province)
+
         for month in range(1,13):
             self.cardmonth_box.addItem(str(month)) if month>9 else self.cardmonth_box.addItem("0"+str(month))
         for year in range(2020,2031):
